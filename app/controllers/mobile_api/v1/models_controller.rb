@@ -1,4 +1,4 @@
-class Api::Mobile::V1::ModelsController < Api::Mobile::V1::BaseController
+class MobileApi::V1::ModelsController < MobileApi::V1::BaseController
 
   def show
     @type = params[:type]

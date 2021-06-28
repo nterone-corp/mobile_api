@@ -1,7 +1,7 @@
 MobileApi::Engine.routes.draw do
   namespace :v1 do
     mount_devise_token_auth_for 'User', at: 'auth', controllers: {
-      sessions: 'api/mobile/v1/user_sessions'
+      sessions: 'mobile_api/v1/user_sessions'
     }
 
     get '/models/:type/:id', to: 'models#show'
