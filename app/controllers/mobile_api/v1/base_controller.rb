@@ -3,5 +3,6 @@ class MobileApi::V1::BaseController < MobileApi::ApplicationController
   before_action :authenticate_user!
   after_action  :verify_authorized
 
-  skip_before_action :verify_authenticity_token
+  # disable CSRF protection
+  protect_from_forgery with: :null_session
 end
