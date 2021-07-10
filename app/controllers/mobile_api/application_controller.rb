@@ -7,10 +7,10 @@ module MobileApi
     skip_before_action :protect_from_forgery
     include Pundit
 
-    around_action :handle_exceptions, if: proc { request.path.include?('/api') }
+    around_action :mobile_api_handle_exceptions, if: proc { request.path.include?('/api') }
 
     # Catch exception and return JSON-formatted error
-    def handle_exceptions
+    def mobile_api_handle_exceptions
       begin
         yield
       rescue ActiveRecord::RecordNotFound => e
