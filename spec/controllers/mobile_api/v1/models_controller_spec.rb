@@ -5,4 +5,8 @@ describe MobileApi::V1::ModelsController do
     before { get :show }
     it { expect(response).to be_success }
   end
+
+  context 'pass params to serializer' do
+
+  end
 end

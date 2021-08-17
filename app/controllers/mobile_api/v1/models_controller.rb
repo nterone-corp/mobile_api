@@ -8,7 +8,7 @@ class MobileApi::V1::ModelsController < MobileApi::V1::BaseController
     if @klass < ActiveRecord::Base
       @object = @klass.find(@id)
       authorize @object, :show?
-      respond_with @object
+      respond_with @object, context: context
     else
       raise 'The type is wrong'
     end
@@ -36,7 +36,7 @@ class MobileApi::V1::ModelsController < MobileApi::V1::BaseController
         skip_authorization
       end
 
-      respond_with @objects
+      respond_with @objects, context: context
     else
       raise 'The type is wrong'
     end
