@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "5.0.7.2"
+  s.add_dependency "rails", "5.1.7"
   s.add_dependency "devise", "4.8.1"
   s.add_dependency "devise_token_auth", "1.1.4"
   s.add_dependency "pundit", "1.1.0"
